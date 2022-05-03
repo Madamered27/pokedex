@@ -14,7 +14,7 @@
 
     $conexion->set_charset("utf8");
 
-    $consulta = "SELECT * FROM user WHERE `user` = '$usuario'  AND `password` = '$contrasenia'";
+    $consulta = "SELECT * FROM user WHERE user = '$usuario'  AND password = '$contrasenia'";
 
     $resultado = $conexion->query($consulta);
 
