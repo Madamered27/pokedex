@@ -1,5 +1,7 @@
 <?php
-    $habilitado = true;
+    session_start();
+
+    $habilitado = isset($_SESSION["usuario"]) && $_SESSION["usuario"] == "admin";
 ?>
 
 <!doctype html>
@@ -19,6 +21,7 @@
             <?php
                 if ($habilitado) {
                     echo "<h1>Estás logueado</h1>";
+                    echo "<a href='cerrar_sesion.php'>Cerra la sesion pelotudo</a>";
                 } else {
                     echo "<a href='login.php'>Logueate</a>";
                 }

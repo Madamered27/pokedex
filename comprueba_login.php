@@ -1,6 +1,6 @@
 <?php
 
-    require("datos_conexion.php");
+    require_once("datos_conexion.php");
 
     $usuario = $_POST["usuario"];
     $contrasenia = $_POST["contrasenia"];
