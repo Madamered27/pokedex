@@ -3,7 +3,7 @@
 
     $habilitado = isset($_SESSION["usuario"]) && $_SESSION["usuario"] == "admin";
 
-    include_once("test/consulta_db.php");
+    include_once("consulta_db.php");
 ?>
 
 <!doctype html>
