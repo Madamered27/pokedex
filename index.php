@@ -2,6 +2,8 @@
     session_start();
 
     $habilitado = isset($_SESSION["usuario"]) && $_SESSION["usuario"] == "admin";
+
+    include_once("test/consulta_db.php");
 ?>
 
 <!doctype html>
@@ -28,7 +30,7 @@
             ?>
         </div>
         <div class="search-bar">
-            <form>
+            <form action="">
                 <input placeholder="Ingrese el nombre, tipo o número de pokemón">
                 <button type="submit">¿Quién es este tipo de pokemón?</button>
             </form>
