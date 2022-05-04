@@ -9,10 +9,11 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="assets/styles/index.css">
         <title>Index</title>
     </head>
     <body>
-        <div>
+        <div class="header-bar">
             <h1>Logo</h1>
             <h1>Pokédex</h1>
             <?php
@@ -23,13 +24,13 @@
                 }
             ?>
         </div>
-        <div>
+        <div class="search-bar">
             <form>
                 <input placeholder="Ingrese el nombre, tipo o número de pokemón">
                 <button type="submit">¿Quién es este tipo de pokemón?</button>
             </form>
         </div>
-        <div>
+        <div class="pokedex">
             <table>
                 <tr>
                     <th>Imagen</th>
@@ -50,9 +51,7 @@
                     ?>
                 </tr>
             </table>
-        </div>
-        <div>
-            <a href="">
+            <a class="nuevo" href="">
                 <button>Nuevo pokemón</button>
             </a>
         </div>
