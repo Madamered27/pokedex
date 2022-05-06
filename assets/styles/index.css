@@ -5,24 +5,26 @@
 }
 body{
     padding: 1rem;
+    background: #263547;
+
 }
 
 .header-bar{
-    border: 1px solid black;
-    height: 5rem;
+    height: 8rem;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 1rem;
+    background: #DC3545;
 }
 
 .search-bar{
-    border: 1px solid black;
     height: 5rem;
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .search-bar form{
@@ -44,12 +46,65 @@ body{
     width: 100% ;
 }
 
-.pokedex table, th, td{
-    border: 1px solid black;
+
+
+.pokedex table{
     border-collapse: collapse;
+    text-align: center;
+    background: #EBEBEB;
+    font-family: "Century Gothic";
 }
 
-.pokedex .nuevo{
-    display: block;
-    margin-top: 1rem;
+th{
+    background: #FFC107;
+    padding: 15px;
+    font-size: 20px;
 }
+
+td{
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+a{
+    font-family: "Century Gothic";
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.ingresar, button{
+    background: #FFC107;
+    color: #263547;
+    padding: 5px 10px 5px 10px ;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 2px 2px 3px black;
+}
+
+.nuevo{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.TIERRA{
+    background: saddlebrown;
+    color: whitesmoke;
+}
+
+.AGUA{
+    background: darkcyan;
+    color: whitesmoke;
+}
+
+.FUEGO{
+    background: chocolate;
+    color: whitesmoke;
+}
+
+.AIRE{
+    background: lightslategrey;
+    color: whitesmoke;
+}s

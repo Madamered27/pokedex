@@ -15,5 +15,7 @@
             <input type='password' name='contrasenia'> <br><br>
             <input type='submit' name='enviar' value="Login">
         </form>
+
+    <a href="consulta.php">VER POKEMONES</a>
     </body>
 </html>
