@@ -72,7 +72,7 @@ a{
     font-size: 20px;
 }
 
-.ingresar, button{
+.ingresar, .volver, button{
     background: #FFC107;
     color: #263547;
     padding: 5px 10px 5px 10px ;
@@ -107,4 +107,33 @@ a{
 .AIRE{
     background: lightslategrey;
     color: whitesmoke;
-}s
+}
+
+.container div{
+    margin: 10px auto;
+    display:flex;
+    justify-content: center; /* align horizontal */
+    width: 50%;
+}
+
+.imagenElimiado{
+    width: 600px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.volver{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    width: 20%;
+}
+
+.modificacion td{
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background:#D1E7DD;
+}
