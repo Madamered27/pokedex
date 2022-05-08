@@ -17,7 +17,7 @@ if ( isset( $_GET["mensaje"] ) ) {
 ?>
 
 <!-- Tabla -->
-<div class="pokedex container">
+<div class="pokedex container" style="margin-bottom: 2rem;">
     <table>
         <tr>
             <th>Imagen</th>
@@ -45,12 +45,11 @@ if ( isset( $_GET["mensaje"] ) ) {
             DATA;
             if( $habilitado ){
                 echo <<<ABM
-                    <td>
-                        <a href="formEliminar.php?pokemonId={$pokemon["uid"]}">Eliminar</a>
-                    </td>
-                    <td>
+                    <td class="abm">
+                        <a href="formEliminar.php?pokemonId={$pokemon["uid"]}" style="color: #DC3545">Eliminar</a>
                         <a href="formEditar.php?pokemonId={$pokemon["uid"]}">Editar</a>
                     </td>
+                    
                 </tr>
                 ABM;
             }
