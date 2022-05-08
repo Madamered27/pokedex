@@ -175,3 +175,12 @@ a{
 .form-control{
     background-color: #F1F1F1FF !important;
 }
+
+
+/* -------- POKEMON ELIMINADO --------*/
+
+.imagenElimiado {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
