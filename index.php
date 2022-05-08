@@ -21,7 +21,7 @@ if (isset($_GET["mensaje"])) {
 ?>
 
 <!-- Tabla -->
-<div class="pokedex">
+<div class="pokedex container">
     <table>
         <tr>
             <th>Imagen</th>
