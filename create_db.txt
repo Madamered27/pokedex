@@ -56,7 +56,7 @@ INSERT INTO Pokemon (uid, name, url_img, description, idType)
 VALUES (7, "Diglett", "img/diglett.png", "pokemon de tierra", 2);
 
 INSERT INTO Pokemon (uid, name, url_img, description, idType)
-VALUES (8, "Cubone", "img/mubone.png", "pokemon de tierra", 2);
+VALUES (8, "Cubone", "img/cubone.png", "pokemon de tierra", 2);
 
 INSERT INTO Pokemon (uid, name, url_img, description, idType)
 VALUES (9, "Mudbray", "img/mudbray.png", "pokemon de tierra", 2);

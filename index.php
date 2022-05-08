@@ -46,10 +46,9 @@ if ( isset( $_GET["mensaje"] ) ) {
             if( $habilitado ){
                 echo <<<ABM
                     <td>
-                        <a href="formEliminar.php?pokemonId={$pokemon["uid"]}">Eliminar</a>
-                    </td>
-                    <td>
-                        <a href="formEditar.php?pokemonId={$pokemon["uid"]}">Editar</a>
+                        <a class="boton" href="formEliminar.php?pokemonId={$pokemon["uid"]}">Eliminar</a>
+                    
+                        <a class="boton" href="formEditar.php?pokemonId={$pokemon["uid"]}">Editar</a>
                     </td>
                 </tr>
                 ABM;
