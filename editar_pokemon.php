@@ -1,7 +1,7 @@
 <?php
-// funcion para editar pokemon
 
-$conexion = mysqli_connect("localhost", "root", "", "pokedex");
+include_once("datos_conexion.php");
+include_once ("header.php");
 
 //campos del form del pokemon que quiero modificar
 $idPokemon = $_POST["uid"];
@@ -20,7 +20,6 @@ $descriptionOld = $_POST["descriptionOld"];
 $typeDescriptionOld = $_POST["typeDescriptionOld"];
 $imageOld = $_POST["imageOld"];
 
-
 //función para guardar la imagen del la subida temporal a la carpeta img
 function copiarArchivoSubidoDeCarpetaTemporalADestino($destination)
 {
@@ -28,40 +27,18 @@ function copiarArchivoSubidoDeCarpetaTemporalADestino($destination)
 }
 copiarArchivoSubidoDeCarpetaTemporalADestino("./img/" . $_FILES["image"]["name"]);
 
-//consulta para modificar en la bd
+
 mysqli_query($conexion, "UPDATE pokemon SET uid = '$idPokemon', name = '$nombrePokemon', description = '$descripcionPokemon', idType = '$tipoPokemon', url_img = '$urlImagenNueva' WHERE uid = '$idOld'");
+
+
 
 //consulta para buscar los datos del pokemon modificado y así imprimir en pantalla
 $pokemonConsultado = mysqli_query($conexion, "SELECT p.*, t.description as typeDescription FROM pokemon p JOIN type t ON p.idType = t.id WHERE uid = '$idPokemon'");
 $pokemon = ["pokemon" => $pokemonConsultado];
 
-
+$conexion->close();
 ?>
 
-<!doctype html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/styles/index.css">
-    <title>Index</title>
-</head>
-<body>
-<div class="header-bar">
-    <img src="img/pokeball.png" width="80" height="80">
-    <img src="img/titulo.png" height="80">
-
-</div>
-<div class="search-bar">
-    <form action="">
-        <input placeholder="Ingrese el nombre, tipo o número de pokemón">
-        <button type="submit">¿Quién es este tipo de pokemón?</button>
-    </form>
-</div>
 
 <div class="container">
     <?php
@@ -120,19 +97,12 @@ $pokemon = ["pokemon" => $pokemonConsultado];
 
     <br><a href='index.php' class="volver">Volver al inicio</a>
 </div>
-<div class="nuevo">
+</div>
 
-    <a class="nuevo" href="">
-        <button>Nuevo pokemón</button>
-    </a>
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+<?php
+include_once("scriptsBootstrap.php");
+?>
+
 </body>
 </html>
 

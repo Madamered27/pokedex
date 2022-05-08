@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect("localhost", "root", "", "pokedex");
+include_once("datos_conexion.php");
 
 $pokemonId = $_GET["pokemonId"];
 
@@ -16,13 +16,13 @@ $pokemonADetallar = mysqli_fetch_array($consultaPokemon);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../assets/styles/index.css">
+    <link rel="stylesheet" href="assets/styles/index.css">
     <title>Index</title>
 </head>
 <body>
 <div class="header-bar">
-    <img src="../img/pokeball.png" width="80" height="80">
-    <img src="../img/titulo.png" height="80">
+    <img src="img/pokeball.png" width="80" height="80">
+    <img src="img/titulo.png" height="80">
 
 </div>
 <div class="search-bar">
@@ -44,9 +44,9 @@ $pokemonADetallar = mysqli_fetch_array($consultaPokemon);
 
         <?php
 
-        echo '<tr><td><img src="../' . $pokemonADetallar['url_img'] . '" width="100" height="100" /></td>';
+        echo '<tr><td><img src="' . $pokemonADetallar['url_img'] . '" width="100" height="100" /></td>';
         echo "<td>" . $pokemonADetallar['name'] . "</td>";
-        echo '<td><img title="' . $pokemonADetallar['typeDescription'] . '" src="../img/' . $pokemonADetallar['typeDescription'] . '.png" width="50" height="50" /></td>';
+        echo '<td><img title="' . $pokemonADetallar['typeDescription'] . '" src="img/' . $pokemonADetallar['typeDescription'] . '.png" width="50" height="50" /></td>';
         echo "<td>" . $pokemonADetallar['description'] . "</td></tr>";
         ?>
     </table>
