@@ -23,6 +23,11 @@ $conexion->close();
 </head>
 <body>
 
+<audio autoplay hidden>
+    <source src="assets/pokemon.mp3" type="audio/mp3">
+    Tu navegador no soporta audio HTML5.
+</audio>
+
 <div class="header-bar container-fluid">
     <img src="img/pokeball.png" width="80" height="80">
     <img src="img/titulo.png" height="80">
