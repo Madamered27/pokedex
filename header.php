@@ -22,7 +22,7 @@
     <?php
     if ($habilitado) {
         echo "<h1>Estás logueado</h1>";
-        echo "<a href='cerrar_sesion.php'>Cerra la sesion pelotudo</a>";
+        echo "<a href='cerrar_sesion.php'>Cerrar sesión</a>";
     } else {
         echo "<a href='login.php' CLASS='ingresar'>Ingresar</a>";
     }
