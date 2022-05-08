@@ -1,5 +1,5 @@
 <?php
-
+require_once ("permisos.php");
 include_once ("header.php");
 include_once ("consultaDatosPokemonAnterior.php");
 
