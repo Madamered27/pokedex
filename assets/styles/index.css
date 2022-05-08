@@ -3,15 +3,13 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    padding: 1rem;
-    background: #263547;
 
+body{
+    background: #263547;
 }
 
 .header-bar{
     height: 8rem;
-    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,7 +18,6 @@ body{
 }
 
 .search-bar{
-    height: 5rem;
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
@@ -30,7 +27,6 @@ body{
 .search-bar form{
     display: flex;
     width: 100%;
-    padding: 1rem;
 }
 
 .search-bar input{
@@ -45,8 +41,6 @@ body{
 .pokedex table{
     width: 100% ;
 }
-
-
 
 .pokedex table{
     border-collapse: collapse;
@@ -72,7 +66,7 @@ a{
     font-size: 20px;
 }
 
-.ingresar, .volver, button{
+.ingresar, button{
     background: #FFC107;
     color: #263547;
     padding: 5px 10px 5px 10px ;
@@ -109,31 +103,75 @@ a{
     color: whitesmoke;
 }
 
-.container div{
-    margin: 10px auto;
-    display:flex;
-    justify-content: center; /* align horizontal */
-    width: 50%;
+
+
+/*------ INDEX ------*/
+
+.buscar{
+    box-shadow: none;
+    background-color: #FFC107;
 }
 
-.imagenElimiado{
-    width: 600px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    margin: 10px auto;
+.buscar:hover{
+    background-color: #d2a007;
 }
 
-.volver{
-    display: flex;
-    justify-content: center;
-    margin: 10px auto;
-    width: 20%;
+.btn-outline-secondary{
+    color: #263547;
+    border-color: #FFC107;
 }
 
-.modificacion td{
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background:#D1E7DD;
+.btn-outline-secondary:hover{
+    border-color: #d2a007;
+}
+
+
+
+ /*------ LOGIN ------*/
+
+
+ .bg-dark {
+     background-color: #263547 !important;
+     margin-bottom: 0 !important;
+ }
+
+ .tarjeta {
+     border: 1.5rem solid rgb(241, 241, 241);
+ }
+
+.retornarInicio {
+    color: #F1F1F1FF;
+}
+
+.retornarInicio:hover {
+    color: #F1F1F1FF;
+}
+
+.btn-primary {
+    color: #F1F1F1FF;
+    background-color: #327a27;
+    border-color: #263547;
+}
+
+.btn-primary:hover {
+    color: #F1F1F1FF;
+    background-color: #255b1d;
+    border-color: #263547;
+}
+
+.bg-fondo {
+    background-color: #DC3545 !important;
+}
+
+.btn-close {
+    box-shadow: none;
+    margin: 1.5rem;
+}
+
+.tituloPokedex {
+    color: #F1F1F1FF;
+}
+
+.form-control{
+    background-color: #F1F1F1FF !important;
 }

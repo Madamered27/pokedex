@@ -5,7 +5,6 @@
     $usuario = $_POST["usuario"];
     $contrasenia = $_POST["contrasenia"];
 
-    $conexion = new mysqli($db_host, $db_usuario, $db_pass , $db_nombre );
 
     if($conexion->connect_errno){
         echo "No se pudo conectar con el servidor " . $conexion->connect_errno;

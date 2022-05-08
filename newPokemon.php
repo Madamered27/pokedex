@@ -1,4 +1,4 @@
-<div class="nuevo">
+<div class="nuevo container">
 
     <a href="formAltaPokemon.php">
     Nuevo Pokemon
