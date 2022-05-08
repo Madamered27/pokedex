@@ -66,7 +66,7 @@ a{
     font-size: 20px;
 }
 
-.ingresar, button, .boton{
+.ingresar, button, .boton, .volver{
     background: #FFC107;
     color: #263547;
     padding: 5px 10px 5px 10px ;
@@ -108,6 +108,16 @@ a{
     padding-top: 10px;
     padding-bottom: 10px;
     background:#D1E7DD;
+}
+
+.volver {
+    text-align: center;
+    align-content: center;
+}
+
+.detalle {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 

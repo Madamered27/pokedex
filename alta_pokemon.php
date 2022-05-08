@@ -1,4 +1,5 @@
 <?php
+require_once("permisos.php");
 include_once("datos_conexion.php");
 
 //datos traidos del form del pokemon nuevo a añadir
@@ -17,34 +18,19 @@ function copiarArchivoSubidoDeCarpetaTemporalADestino($destination)
 {
     return move_uploaded_file($_FILES["imagenPokemon"]["tmp_name"], $destination);
 }
+
 copiarArchivoSubidoDeCarpetaTemporalADestino("./img/" . $_FILES["imagenPokemon"]["name"]);
 
 
-mysqli_query($conexion,"INSERT INTO pokemon (uid, name, url_img, description, idType) VALUES ('$id', '$nombrePokemon', '$urlImagenNueva', '$descripcion', $tipoPokemon)" );
+mysqli_query($conexion, "INSERT INTO pokemon (uid, name, url_img, description, idType) VALUES ('$id', '$nombrePokemon', '$urlImagenNueva', '$descripcion', $tipoPokemon)");
 
 $consultarPokemonNuevo = mysqli_query($conexion, "SELECT p.*, t.description as typeDescription FROM pokemon p JOIN type t ON p.idType = t.id WHERE uid = '$id'");
 
 $pokemonNuevo = mysqli_fetch_array($consultarPokemonNuevo);
 
-$mensaje = "Se ha creado un nuevo pokemon: ".$pokemonNuevo["name"].", con id: ".$pokemonNuevo["uid"];
+$mensaje = "Se ha creado un nuevo pokemon: " . $pokemonNuevo["name"] . ", con id: " . $pokemonNuevo["uid"];
 
 $conexion->close();
-
-/*
-if ($conexion->connect_errno) {
-    echo "No se pudo conectar con el servidor " . $conexion->connect_errno;
-    exit();
-}
-
-if ($conexion->query($consulta)) {
-    echo "Se añadio el Pokemon";
-    echo $pokemonNuevo["name"];
-}
-
-//por si consulta falla o esta mal escrita
-if ($conexion->errno) {
-    die($conexion->errno);
-}*/
 
 
 header("Location: index.php?mensaje=$mensaje");

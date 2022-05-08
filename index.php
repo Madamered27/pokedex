@@ -1,17 +1,14 @@
 <?php
 session_start();
-
-$habilitado = isset($_SESSION["usuario"]) && $_SESSION["usuario"] == "admin";
-
 include_once("consulta_db.php");
 include_once("consulta.php");
 include_once("header.php");
 include_once("searchbar.php");
 
 
-if ( isset( $_GET["mensaje"] ) ) {
+if (isset($_GET["mensaje"])) {
     $mensaje = $_GET["mensaje"];
-    echo '<div class="alert alert-success" role="alert">' . $mensaje . '</div><br>';
+    echo '<br><div class="alert alert-success text-center container pokedex" role="alert">' . $mensaje . '</div><br>';
 }
 
 ?>
@@ -28,8 +25,8 @@ if ( isset( $_GET["mensaje"] ) ) {
             <?= $habilitado ? "<th>ABM</th>" : "" ?>
         </tr>
 
-    <?php
-        foreach ($data["pokemones"] as $pokemon){
+        <?php
+        foreach ($data["pokemones"] as $pokemon) {
             echo <<<DATA
                 <tr>
                     <td>
@@ -43,7 +40,7 @@ if ( isset( $_GET["mensaje"] ) ) {
                     </td>
                     <td>$pokemon[description]</td>
             DATA;
-            if( $habilitado ){
+            if ($habilitado) {
                 echo <<<ABM
                     <td>
                         <a class="boton" href="formEliminar.php?pokemonId={$pokemon["uid"]}">Eliminar</a>
@@ -52,16 +49,17 @@ if ( isset( $_GET["mensaje"] ) ) {
                     </td>
                 </tr>
                 ABM;
+            } else {
+                echo "</tr>";
             }
-            else{ echo "</tr>"; }
         }
-    ?>
+        ?>
     </table>
 </div>
 
 <?php
-    include_once("newPokemon.php");
-    include_once("scriptsBootstrap.php");
+include_once("newPokemon.php");
+include_once("scriptsBootstrap.php");
 ?>
 
 </body>

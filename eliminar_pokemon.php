@@ -1,6 +1,8 @@
 <?php
+require_once("permisos.php");
+
 include_once("datos_conexion.php");
-include_once ("header.php");
+include_once("header.php");
 
 $pokemonAEliminar = $_POST["uidPokemon"];
 $nombrePokemonEliminado = $_POST["nombrePokemon"];
@@ -20,7 +22,7 @@ if ($conexion->errno) {
 $conexion->close();
 ?>
 
-<div class="container">
+<div class="container pokedex text-center">
 
     <?php
     echo '<div class="alert alert-danger" role="alert">
@@ -29,16 +31,10 @@ $conexion->close();
     ?>
 
     <div class="container d-flex ">
-        <img class="imagenElimiado" src="img/eliminado.png">
+        <img class="imagenElimiado" src="img/eliminado.png" style="margin: auto; display: block">
     </div>
 
-    <br><a href='index.php' class="btn btn-primary text-center">Volver al inicio</a>
-</div>
-<div class="nuevo container">
-
-    <a class="nuevo" href="">
-        <button>Nuevo pokemón</button>
-    </a>
+    <br><a href='index.php' class="volver">Volver al inicio</a>
 </div>
 </div>
 

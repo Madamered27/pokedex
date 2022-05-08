@@ -1,7 +1,7 @@
 <?php
-
+require_once ("permisos.php");
 include_once("datos_conexion.php");
-include_once ("header.php");
+include_once("header.php");
 
 //campos del form del pokemon que quiero modificar
 $idPokemon = $_POST["uid"];
@@ -25,11 +25,11 @@ function copiarArchivoSubidoDeCarpetaTemporalADestino($destination)
 {
     return move_uploaded_file($_FILES["image"]["tmp_name"], $destination);
 }
+
 copiarArchivoSubidoDeCarpetaTemporalADestino("./img/" . $_FILES["image"]["name"]);
 
 
 mysqli_query($conexion, "UPDATE pokemon SET uid = '$idPokemon', name = '$nombrePokemon', description = '$descripcionPokemon', idType = '$tipoPokemon', url_img = '$urlImagenNueva' WHERE uid = '$idOld'");
-
 
 
 //consulta para buscar los datos del pokemon modificado y así imprimir en pantalla
@@ -48,7 +48,7 @@ $conexion->close();
     ?>
 </div>
 
-<div class="pokedex">
+<div class="container pokedex text-center">
 
     <table>
         <tr>
@@ -105,6 +105,3 @@ include_once("scriptsBootstrap.php");
 
 </body>
 </html>
-
-
-
