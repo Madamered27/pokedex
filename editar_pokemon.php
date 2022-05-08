@@ -14,7 +14,7 @@ $imagenPokemon = $_FILES["image"];
 $urlImagenNueva = "img/" . $_FILES["image"]["name"];
 
 //campos que traemos ocultos para imprimir como datos del pokemon anterior
-$idOld = $_POST["idPokemon"];
+$idOld = $_POST["idOld"];
 $nameOld = $_POST["nameOld"];
 $descriptionOld = $_POST["descriptionOld"];
 $typeDescriptionOld = $_POST["typeDescriptionOld"];
@@ -85,12 +85,13 @@ $pokemon = ["pokemon" => $pokemonConsultado];
         <?php
 
         echo '<tr><td><img src="' . $imageOld . '" width="100" height="100" /></td>';
-        echo "<td>" . $nameOld . "</td>";
+        echo "<td>" . $idOld . "</td>";
         echo "<td>" . $nameOld . "</td>";
         echo '<td><img title="' . $typeDescriptionOld . '" src="img/' . $typeDescriptionOld . '.png" width="50" height="50" /></td>';
         echo "<td>" . $descriptionOld . "</td>";
         echo '<tr class="modificacion">
 <td class="modificacion">↓</td>
+<td>↓</td>
 <td>↓</td>
 <td>↓</td>
 <td>↓</td>
