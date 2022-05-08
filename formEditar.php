@@ -39,7 +39,7 @@ echo '
                     <input type="hidden" name="descriptionOld" value="' . $pokemonAnterior["description"] . '">
                     <input type="hidden" name="nameOld" value="' . $pokemonAnterior["name"] . '">
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary mt-3 w-100 p-2">Submit</button>
+                    <button type="submit" class="btn btn-primary mt-3 w-100 p-2">Modificar</button>
                 </div>
             </form>
         </div>
