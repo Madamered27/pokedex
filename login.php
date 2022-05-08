@@ -49,10 +49,6 @@
                     </form>
 
                 </div>
-
-                <div class="text-center">
-
-                </div>
             </div>
         </div>
 

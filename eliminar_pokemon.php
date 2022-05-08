@@ -28,12 +28,13 @@ $conexion->close();
 </div>';
     ?>
 
+    <div class="container d-flex ">
+        <img class="imagenElimiado" src="img/eliminado.png">
+    </div>
 
-    <br> <img class="imagenElimiado" src="img/eliminado.png"><br>
-
-    <br><a href='index.php' class="volver">Volver al inicio</a>
+    <br><a href='index.php' class="btn btn-primary text-center">Volver al inicio</a>
 </div>
-<div class="nuevo">
+<div class="nuevo container">
 
     <a class="nuevo" href="">
         <button>Nuevo pokemón</button>
